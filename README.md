@@ -1,4 +1,4 @@
-# Trabalho 1 - Compiladores
+# Trabalho 2 - Compiladores
 
 ## Alunos e RAs
 
@@ -8,12 +8,15 @@
 
 ## Sobre
 
-O objetivo deste projeto é escrever um analisador léxico capaz de ler programas em forma de pseudocódigos de um arquivo texto e gerar outro arquivo de saída contendo os _tokens_ de cada termo presente da entrada de acordo com as regras de gramática especificadas.
+O objetivo deste projeto é escrever um analisador sintático capaz de analisar programas na linguagem LA (Linguagem Algorítmica) desenvolvida pelo prof. Jander, no âmbito do DC/UFSCar. A partir de um código fonte, o analisador detecta erros sintáticos, indicando a linha e o motivo de determinada falha sintática.
+
 Os principais arquivos responsáveis pela conclusão do projeto são:
 
-AlgumaLexer.g4 - contém as regras para a gramática AlgumaLexer como PALAVRA-CHAVE, IDENT, CADEIA e regras para detecção de erros, por exemplo CADEIA-NAO-FECHADA, COMENTARIO-NAO-FECHADO.
+AlgumaLexer.g4 - contém as regras para a gramática da linguagem LA, como identificadores, constantes, operações e parâmetros, assim como a definição de início e fim de comentários, início e fim do próprio programa, e erros possíveis que podem ser encontrados, como CADEIA_NAO_FECHADA, COMENTARIO_NAO_FECHADO e SIMBOLO_NAO_IDENTIFICADO.
 
-Principal.java - contém a função principal do código que lê os arquivos de entrada e gera o arquivo de saída contendo os _tokens_ de cada termo presente e de possíveis erros.
+Principal.java - contém a função principal do código que lê os arquivos de entrada e gera os arquivos de saída contendo as mensagens de erro para cada programa analisado.
+
+MyCustomErrorListener.java - gera a mensagem de erro ocorrido no código, indicando a linha e o motivo da falha sintática em questão, e interrompe a execução do programa.
 
 ## Pré-Requisitos
 
