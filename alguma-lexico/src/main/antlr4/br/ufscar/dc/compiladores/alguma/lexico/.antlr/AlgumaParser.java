@@ -1,4 +1,4 @@
-// Generated from c:\Users\fehie\OneDrive\Área de Trabalho\Faculdade\Compiladores\t1\t1-compila-dores\alguma-lexico\src\main\antlr4\br\u005Cufscar\dc\compiladores\alguma\lexico\Alguma.g4 by ANTLR 4.9.2
+// Generated from c:\Users\fehie\OneDrive\Área de Trabalho\Faculdade\Compiladores\t1\t2-compila-dores\alguma-lexico\src\main\antlr4\br\u005Cufscar\dc\compiladores\alguma\lexico\Alguma.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
