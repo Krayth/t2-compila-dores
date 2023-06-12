@@ -71,7 +71,7 @@ cmdLeia: 'leia' '(' '^'? identificador (',' '^'? identificador)* ')';
 cmdEscreva: 'escreva' '(' expressao (',' expressao)* ')';
 
 
-
+//parametros
 parametro: 'var'? identificador (',' identificador)* ':' tipo_estendido;
 parametros: parametro (',' parametro)*;
 
