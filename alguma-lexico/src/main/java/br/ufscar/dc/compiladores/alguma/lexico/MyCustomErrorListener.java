@@ -40,13 +40,14 @@ public class MyCustomErrorListener implements ANTLRErrorListener {
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine,
             String msg, RecognitionException e) {
-        // Aqui vamos colocar o tratamento de erro customizado
         Token t = (Token) offendingSymbol;
 
+        // Condicao de parada para interromper o programa
         while(contador_erro < 1) {
             if (AlgumaLexer.VOCABULARY.getDisplayName(t.getType()).equals("CADEIA_NAO_FECHADA")) {
                 pw.println("Linha " + t.getLine() + ": cadeia literal nao fechada");
                 pw.println("Fim da compilacao");
+                // Ao detectar algum erro o contador eh iterado e o programa terminado
                 contador_erro++;
             } else if (AlgumaLexer.VOCABULARY.getDisplayName(t.getType()).equals("COMENTARIO_NAO_FECHADO")) {
                 pw.println("Linha " + t.getLine() + ": comentario nao fechado");
@@ -66,7 +67,5 @@ public class MyCustomErrorListener implements ANTLRErrorListener {
                 contador_erro++;
             }
         }
-        // System.out.println("Minha mensagem customizada: Erro na linha "+line+", o
-        // token é "+t.getText());
     }
 }

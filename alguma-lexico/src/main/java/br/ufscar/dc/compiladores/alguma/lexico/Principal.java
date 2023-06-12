@@ -31,8 +31,10 @@ public class Principal {
                 //Remove tratamento padrão
                 parser.removeErrorListeners();
 
+                //Contador de erros para condicao de parada do detector de erros
                 Integer contador_erro = 0;
 
+                //Chamada do tratador de erros
                 MyCustomErrorListener mcel = new MyCustomErrorListener(pw, contador_erro);
                 parser.addErrorListener(mcel);
                 
